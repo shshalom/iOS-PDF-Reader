@@ -14,6 +14,7 @@ internal final class StartViewController: UIViewController {
     /// Displays a smaller sized PDF document
     @IBAction fileprivate func showSmallPDFDocument() {
         let smallPDFDocumentName = "apple"
+        
         if let doc = document(smallPDFDocumentName) {
             showDocument(doc)
         } else {
@@ -25,6 +26,7 @@ internal final class StartViewController: UIViewController {
     @IBAction fileprivate func showLargePDFDocument() {
         let largePDFDocumentName = "mongodb"
         if let doc = document(largePDFDocumentName) {
+        
             showDocument(doc)
         } else {
             print("Document named \(largePDFDocumentName) not found in the file system")
@@ -47,7 +49,7 @@ internal final class StartViewController: UIViewController {
     /// - parameter document: document to present
     fileprivate func showDocument(_ document: PDFDocument) {
         let image = UIImage(named: "")
-        let controller = PDFViewController.createNew(with: document, title: "", actionButtonImage: image, actionStyle: .activitySheet)
+        let controller = PDFViewController.createNew(with: document, title: "", actionButtonImage: image, actionStyle: .none)
         navigationController?.pushViewController(controller, animated: true)
     }
 

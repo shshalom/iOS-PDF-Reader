@@ -50,6 +50,8 @@ public final class PDFViewController: UIViewController {
         
         /// Performs a custom action
         case customAction((Void) -> ())
+        
+        case none
     }
     
     /// Collection veiw where all the pdf pages are rendered
@@ -70,7 +72,17 @@ public final class PDFViewController: UIViewController {
     /// PDF document that should be displayed
     fileprivate var document: PDFDocument!
     
-    fileprivate var actionStyle = ActionStyle.print
+    fileprivate var actionStyle:ActionStyle = ActionStyle.print {
+        didSet {
+            switch actionStyle {
+            case .none:
+                navigationItem.rightBarButtonItem = nil
+            default:
+                 navigationItem.rightBarButtonItem = actionButton
+            }
+            
+        }
+    }
     
     /// Image used to override the default action button image
     fileprivate var actionButtonImage: UIImage?
@@ -97,7 +109,6 @@ public final class PDFViewController: UIViewController {
         collectionView.backgroundColor = backgroundColor
         collectionView.register(PDFPageCollectionViewCell.self, forCellWithReuseIdentifier: "page")
         
-        navigationItem.rightBarButtonItem = actionButton
         
         let numberOfPages = CGFloat(document.pageCount)
         let cellSpacing = CGFloat(2.0)
@@ -145,6 +156,7 @@ public final class PDFViewController: UIViewController {
             presentActivitySheet()
         case .customAction(let customAction):
             customAction()
+        case .none:break
         }
     }
     

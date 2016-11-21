@@ -216,7 +216,7 @@
 					};
 					146D370B1DAB7E23004EEFA5 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = HC9R4J3HM5;
+						DevelopmentTeam = 6564AAD36T;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -450,7 +450,7 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = HC9R4J3HM5;
+				DEVELOPMENT_TEAM = 6564AAD36T;
 				INFOPLIST_FILE = "$(SRCROOT)/PDFReader/Demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -468,7 +468,7 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = HC9R4J3HM5;
+				DEVELOPMENT_TEAM = 6564AAD36T;
 				INFOPLIST_FILE = "$(SRCROOT)/PDFReader/Demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
